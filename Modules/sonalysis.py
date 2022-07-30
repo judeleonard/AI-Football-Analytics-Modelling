@@ -23,7 +23,7 @@ def generate_barca_player_pass_stats(data):
     #liverpool_pass[['end_x','end_y']] = liverpool_pass['pass_end_location'].apply(pd.Series)
     return barca_pass
 
-def _get_player(barca_pass):
+def get_sona_player(barca_pass):
     """Function that returns the players that participated in the team passes """
     Player = barca_pass.players.unique().tolist()
     return [Name for Name in Player if Name != NaN]
@@ -41,7 +41,7 @@ def generate_realMadrid_player_pass_stats(data):
 
 ############################# shots ######################################
 
-def _get_both_teams_shots(data):  
+def get_sona_both_teams_shots(data):  
     shots = data[data['action'] =='shot'][['team', 'players', 'x', 'y', 'shot_outcome']] 
     fcb_shots = shots[shots['team']=='fcb']
     #liverpool_shots[['x','y']] = liverpool_shots['location'].apply(pd.Series)

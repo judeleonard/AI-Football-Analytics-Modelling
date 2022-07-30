@@ -171,7 +171,7 @@ elif Choice == "Test with Sonalysis dataset":
 
     if uploaded_file is not None:
         if features == "Both Team Expected Goals":
-               viz = _get_both_teams_shots(data)
+               viz = get_sona_both_teams_shots(data)
                st.pyplot(viz)
     
 ################################# Passes #########################################
@@ -184,7 +184,7 @@ elif Choice == "Test with Sonalysis dataset":
                 Barca_pass = generate_barca_player_pass_stats(data)
                 # if st.sidebar.checkbox('View the Processed dataset I used for this Player Pass modelling', False):
                 #   st.write(Barca_pass)
-                players = _get_player(Barca_pass)
+                players = get_sona_player(Barca_pass)
                 Player_Name = st.sidebar.selectbox('Player Name to Analyze', players, key='7')
                 # #st.sidebar.selectbox('Name of Player to Analyze', )
                 player_pass_data = Barca_pass[Barca_pass['players']== Player_Name]
@@ -218,7 +218,7 @@ elif Choice == "Test with Sonalysis dataset":
                 Real_pass = generate_realMadrid_player_pass_stats(data)
                 # if st.sidebar.checkbox('View the dataset I processed for this Player Pass modelling', False):
                 #     st.write(Real_pass)
-                players = _get_player(Real_pass)
+                players = get_sona_player(Real_pass)
                 Player_Name = st.sidebar.selectbox('Player Name to Analyze', players, key='2')
                 # #st.sidebar.selectbox('Name of Player to Analyze', )
                 player_pass_data = Real_pass[Real_pass['players']== Player_Name]
