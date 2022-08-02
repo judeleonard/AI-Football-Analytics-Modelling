@@ -5,6 +5,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 from mplsoccer.pitch import Pitch
+import plotly.express as px
 pd.set_option('display.max_columns', None)
 
 
@@ -127,6 +128,15 @@ def get_liverpool_shots(data):
     liverpool_shots = shots[shots['team']=='Liverpool']
     liverpool_shots[['x','y']] = liverpool_shots['location'].apply(pd.Series)
     return liverpool_shots
+
+
+def plot_XG_per_min(data):
+    shots = data[data['type'] =='Shot'][['team', 'player','shot_outcome', 'shot_statsbomb_xg', 'minute']]
+    av_xg = shots[['team', 'player', 'minute', 'shot_outcome', 'shot_statsbomb_xg']]
+    av_xg.rename(columns={'shot_statsbomb_xg': 'XG'}, inplace=True)
+    fig = px.line(av_xg, x="minute", y="XG", color='team', markers=True, 
+              width=1200, height=600)
+    return fig
 
 
 def get_LVplayers_that_took_shots(liverpool_shots):

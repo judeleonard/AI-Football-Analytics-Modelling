@@ -17,7 +17,11 @@ st.set_option('deprecation.showfileUploaderEncoding', False)
 
 st.sidebar.title('Menu')
 Choice = st.sidebar.selectbox(
-    '', ['Home', 'Select a team to analyze their Passes stats', 'Analyze Both Teams Expected Goals', 'Analyze Expected Goals by Player','Players Heatmap', 'Test with Sonalysis dataset'], index=0
+    '', ['Home', 'Select a team to analyze their Passes stats', 
+        'Analyze Both Teams Expected Goals', 
+        'Analyze Expected Goals by Player',
+        'Players Heatmap', 'Both Teams Expected Goals by Minutes Played',
+        'Test with Sonalysis dataset'], index=0
 )
 
 # load dataset
@@ -102,6 +106,11 @@ elif Choice == "Analyze Both Teams Expected Goals":
    # shots_data = fetch_data()
     viz = get_both_teams_shots(dataset)
     st.pyplot(viz)
+
+
+elif Choice == "Both Teams Expected Goals by Minutes Played":
+    st.markdown('# Analyze Both Teams Expected Goal by Minutes played')  
+    st.plotly_chart(plot_XG_per_min(dataset))
 
 # ----------Heatmap------------------------------------------------------#   
 elif Choice == "Players Heatmap":
