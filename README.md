@@ -3,7 +3,7 @@ Engineered the data coming from two sources - the one coming from a live API and
 
 ### A Research project
 
-[See app demo](https://vimeo.com/812311179/7b32330b66)
+
 
 
 
