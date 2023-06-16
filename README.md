@@ -1,4 +1,4 @@
-# AI-Football-Analytics-Modelling
+# AI-Football-Analytics-Modeling
 I manipulated the data coming from two sources - the one coming from a live API and another source coming from a database(MongoDB)
 
 ### A Research project
