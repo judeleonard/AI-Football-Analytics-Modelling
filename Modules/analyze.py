@@ -4,12 +4,14 @@ from statsbombpy import sb
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
+import streamlit as st
 from mplsoccer.pitch import Pitch
 import plotly.express as px
-pd.set_option('display.max_columns', None)
+pd.set_option('display.max_columns', 100)
 
 
 #data = sb.competitions()
+@st.cache(allow_output_mutation=True)
 def fetch_data():
     """Fetch available statsbomb data from API"""
     data = sb.events(match_id=18245)
