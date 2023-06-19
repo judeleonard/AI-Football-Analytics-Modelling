@@ -7,7 +7,7 @@ import seaborn as sns
 import streamlit as st
 from mplsoccer.pitch import Pitch
 import plotly.express as px
-#pd.set_option('display.max_columns', 100)
+pd.set_option('display.max_columns', 100)
 
 
 #data = sb.competitions()
