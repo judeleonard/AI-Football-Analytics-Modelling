@@ -7,7 +7,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from mplsoccer.pitch import Pitch
 #from Modules import analyze as fx
-pd.set_option('display.max_columns', 100)
+#pd.set_option('display.max_columns', 100)
 
 import warnings
 warnings.filterwarnings('ignore')
