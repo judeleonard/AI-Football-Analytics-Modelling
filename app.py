@@ -28,7 +28,7 @@ Choice = st.sidebar.selectbox(
 dataset = fetch_data()  
 
 if Choice == "Home":
-    st.markdown("""<h1 style='text-align: center; white;font-size:60px;margin-top:-50x;'>SONALYSIS</h1><h1 style='text-align: center; color: white;font-size:30px;margin-top:-30px;'>Research Methods on Football Analytics Modelling<br></h1>""", unsafe_allow_html=True)
+    st.markdown("""<h1 style='text-align: center; white;font-size:60px;margin-top:-50x;'>SONALYSIS</h1><h1 style='text-align: center; color: white;font-size:30px;margin-top:-30px;'>Research Methods on Football Analytics Modeling<br></h1>""", unsafe_allow_html=True)
 
 
 if Choice == "Select a team to analyze their Passes stats":
